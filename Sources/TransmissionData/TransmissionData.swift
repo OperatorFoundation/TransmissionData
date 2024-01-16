@@ -8,6 +8,7 @@
 import Foundation
 
 import Straw
+import SwiftHexTools
 import Transmission
 
 public class TransmissionData: Transmission.Connection
@@ -135,4 +136,32 @@ public class TransmissionData: Transmission.Connection
         self.readBuffer = self.writeBuffer
         self.writeBuffer = UnsafeStraw()
     }
+}
+
+extension TransmissionData: CustomStringConvertible
+{
+    public var description: String
+    {
+        let readPeek: String
+        do
+        {
+            readPeek = try self.readBuffer.peekAllData().hex
+        }
+        catch
+        {
+            readPeek = "?"
+        }
+
+        let writePeek: String
+        do
+        {
+            writePeek = try self.writeBuffer.peekAllData().hex
+        }
+        catch
+        {
+            writePeek = "?"
+        }
+
+        return "[TransmissionData: readBuffer=\(readPeek), writeBuffer=\(writePeek)]"
+git co    }
 }

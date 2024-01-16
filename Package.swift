@@ -17,6 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/OperatorFoundation/Straw", branch: "main"),
+        .package(url: "https://github.com/OperatorFoundation/SwiftHexTools", branch: "main"),
         .package(url: "https://github.com/OperatorFoundation/Transmission", branch: "main"),
     ],
     targets: [
@@ -26,6 +27,7 @@ let package = Package(
             name: "TransmissionData",
             dependencies: [
                 "Straw",
+                "SwiftHexTools",
                 "Transmission",
             ]
         ),
