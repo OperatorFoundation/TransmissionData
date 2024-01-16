@@ -163,5 +163,5 @@ extension TransmissionData: CustomStringConvertible
         }
 
         return "[TransmissionData: readBuffer=\(readPeek), writeBuffer=\(writePeek)]"
-git co    }
+    }
 }
