@@ -16,9 +16,9 @@ let package = Package(
             targets: ["TransmissionData"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/OperatorFoundation/Straw", branch: "1.0.0"),
-        .package(url: "https://github.com/OperatorFoundation/SwiftHexTools", branch: "1.2.6"),
-        .package(url: "https://github.com/OperatorFoundation/Transmission", branch: "release"),
+        .package(url: "https://github.com/OperatorFoundation/Straw", from: "1.0.1"),
+        .package(url: "https://github.com/OperatorFoundation/SwiftHexTools", from: "1.2.6"),
+        .package(url: "https://github.com/OperatorFoundation/Transmission", from: "1.2.11"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
